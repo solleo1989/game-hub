@@ -1,7 +1,15 @@
 import React from "react";
 import { Button, Grid, GridItem, Show } from "@chakra-ui/react";
-import { ColorModeButton } from "./components/ui/color-mode";
-import NavBar from "./components/NavBar";
+
+import NavBar from "./components/nav-bar";
+import {
+  ColorModeButton,
+  DarkMode,
+  LightMode,
+  useColorMode,
+  useColorModeValue,
+} from "./components/ui/color-mode";
+import GameGrid from "./components/game-grid";
 
 const App = () => {
   return (
@@ -18,17 +26,20 @@ const App = () => {
         <Show when="lg">
           <GridItem
             area="aside"
-            bg="gold"
+            //bg="gold"
             display={{ base: "none", lg: "block" }}
           >
             Aside
           </GridItem>
         </Show>
-        <GridItem area="main" bg="dodgerblue">
-          Main
+        <GridItem
+          area="main"
+          // bg="dodgerblue"
+        >
+          <GameGrid></GameGrid>
         </GridItem>
       </Grid>
-      <ColorModeButton colorScheme="red">Button</ColorModeButton>
+
       <Button colorPalette="red">Button</Button>
       <Button colorPalette="blue" variant="outline">
         Button
