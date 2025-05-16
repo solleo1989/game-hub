@@ -1,9 +1,6 @@
 import { useTheme } from "next-themes";
-import React from "react";
-import { type ColorMode } from "./ui/color-mode";
 import { HStack, IconButton, Text } from "@chakra-ui/react";
 import { LuSun, LuMoon } from "react-icons/lu";
-import { ColorModeButton } from "./ui/color-mode";
 
 const ColorModeToggle = () => {
   const { theme, setTheme } = useTheme();
