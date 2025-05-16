@@ -1,4 +1,6 @@
 const getCroppedImageUrl = (url: string, on : boolean = true) => {
+    if (!url)
+        return "";
     if (!on)
         return url;
     const target = "media/";
