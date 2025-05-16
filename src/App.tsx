@@ -12,6 +12,10 @@ const App = () => {
           base: `"nav" "main"`,
           lg: `"nav nav" "aside main"`, // > 1024px
         }}
+        templateColumns={{
+          base: "1fr",
+          lg: "200px 1fr",
+        }}
       >
         <GridItem area="nav">
           <NavBar></NavBar>
@@ -19,6 +23,7 @@ const App = () => {
         <Show when="lg">
           <GridItem
             area="aside"
+            paddingX={5}
             //bg="gold"
             display={{ base: "none", lg: "block" }}
           >
