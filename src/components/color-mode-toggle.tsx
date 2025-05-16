@@ -15,7 +15,9 @@ const ColorModeToggle = () => {
       <IconButton aria-label="toggle color mode" onClick={toggleColorMode}>
         {theme === "light" ? <LuMoon /> : <LuSun />}
       </IconButton>
-      <Text>{theme === "light" ? "Dark Mode" : "Light Mode"}</Text>
+      <Text whiteSpace="nowrap">
+        {theme === "light" ? "Dark Mode" : "Light Mode"}
+      </Text>
       {/* {<ColorModeButton />} */}
     </HStack>
   );
