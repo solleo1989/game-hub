@@ -6,9 +6,14 @@ import GenreList from "./components/genre-list";
 import { useState } from "react";
 import type { Genre } from "./components/hooks/use-genre";
 import PlatformSelector from "./components/platform-selector";
+import type { Platform } from "./components/hooks/use-platforms";
+import { PiAlarm } from "react-icons/pi";
 
 const App = () => {
   const [selectedGenre, setSelectedGenre] = useState<Genre | null>(null);
+  const [selectedPlatform, setSelectedPlatform] = useState<Platform | null>(
+    null
+  );
   return (
     <>
       <Grid
@@ -41,8 +46,14 @@ const App = () => {
           area="main"
           // bg="dodgerblue"
         >
-          <PlatformSelector></PlatformSelector>
-          <GameGrid selectedGenre={selectedGenre}></GameGrid>
+          <PlatformSelector
+            selectedPlatform={selectedPlatform}
+            onSelectedPlatform={(platform) => setSelectedPlatform(platform)}
+          />
+          <GameGrid
+            selectedPlatform={selectedPlatform}
+            selectedGenre={selectedGenre}
+          ></GameGrid>
         </GridItem>
       </Grid>
     </>
