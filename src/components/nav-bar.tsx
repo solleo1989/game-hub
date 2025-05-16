@@ -4,7 +4,7 @@ import ColorModeToggle from "./color-mode-toggle";
 
 const NavBar = () => {
   return (
-    <HStack justifyContent="space-between" padding="5px">
+    <HStack justifyContent="space-between" padding="10px">
       <Image src={logo} boxSize="50px" fit="contain"></Image>
       <ColorModeToggle />
     </HStack>
